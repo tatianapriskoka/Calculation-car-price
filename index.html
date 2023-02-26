@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/images/car.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <title>Auto price</title>
+
+</head>
+
+<body class="main">
+    <h1>Расчет стоимости авто</h1>
+    <form name="form">
+        <div class="wrapper">
+            <label for="auto">Выберите автомобиль</label>
+            <select name="autotype" id="auto">
+                <option value="reno"> Reno</option>
+                <option value="opel">Opel</option>
+                <option value="mazda">Mazda</option>
+                <option value="jaguar">Jaguar</option>
+            </select>
+        </div>
+        <div class="form__model">
+            <label class="model__label" for="model">Выберите модель авто</label>
+            <select class="models" name="car-model" id="model">
+            </select>
+        </div>
+        <div class="fuel-options">
+
+            <div class="fuel-options__head">Выберите вид топлива:</div>
+
+            <div class="fuel-options__list">
+                <div class="fuel__type">
+                    <input class="fuel-choice" type="checkbox" id="petrol" name="fuelType" value="petrol" />
+                    <label class="fuel-type-label-1" for="petrol">Бензин</label>
+                </div>
+                <div class="fuel__type">
+                    <input class="fuel-choice" type="checkbox" id="diesel" name="fuelType" value="diesel" />
+                    <label class="fuel-type-label-2" for="diesel">Дизель</label>
+                </div>
+                <div class="fuel__type">
+                    <input class="fuel-choice" type="checkbox" id="gas" name="fuelType" value="gas" />
+                    <label class="fuel-type-label-3" for="gas">Газ</label>
+                </div>
+                <div class="fuel__type">
+                    <input class="fuel-choice" type="checkbox" id="electricity" name="fuelType" value="electricity" />
+                    <label class="fuel-type-label-4" for="electricity">Электричество</label>
+                </div>
+            </div>
+        </div>
+        <div class="engine-volume">
+            <label class="engine-volume__label" for="engineVolume">Введите объём двигателя, литров</label>
+            <input class="engine-volume__input" type="number" id="engineVolume" name="engineVolume" min="1.1" max="3.5">
+        </div>
+
+
+        <div class="car-condition">
+            <div class="car-condition__head">Выберите состояние автомобиля</div>
+
+
+            <div class="condition__type">
+                <input class="condition__type_option" type="radio" id="new" name="conditionType" value="new" checked />
+                <label class="condition__type_label" for="new">Новый</label>
+            </div>
+            <div class="condition__type">
+                <input class="condition__type_option" type="radio" id="used" name="conditionType" value="used" />
+                <label class="condition__type_label" for="used">Подержанный</label>
+            </div>
+        </div>
+
+        <div class="payment">
+            <div class="payment__method">
+                <input class="payment__method_option" type="checkbox" id="card" name="paymentMethod" value="card" />
+                <label class="method__option-label--1" for="card">Карта</label>
+            </div>
+            <div class="method__option">
+                <input class="payment__method_option" type="checkbox" id="cash" name="paymentMethod" value="cash" />
+                <label class="method__option_label" for="cash">Наличные</label>
+            </div>
+            <div class="method__option">
+                <input class="payment__method_option" type="checkbox" id="invoice" name="paymentMethod"
+                    value="invoice" />
+                <label class="method__option_label" for="cash">Счет для юридического лица</label>
+            </div>
+        </div>
+    </form>
+
+    <div class="owners">
+    </div>
+    <div><button class='button'>Рассчитать</button></div>
+    <div class='price'></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
